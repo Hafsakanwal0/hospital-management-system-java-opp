@@ -9,7 +9,7 @@ public class Patient extends User {
     Scanner scanner = new Scanner(System.in);
 
     public void bookAnAppointment() {
-        System.out.println("Appointment Booking");
+        System.out.println("---- Appointment Booking ------");
 
         // Prompt for doctor's name
         System.out.print("Enter doctor's name: ");
