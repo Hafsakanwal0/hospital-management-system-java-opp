@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class User {
     private int id;
     private String name;
@@ -59,4 +61,29 @@ public class User {
         System.out.println("Gender:" + this.gender);
 
     }
+    
+static public void editUser(){
+        User user = new User(1, "Misbah", 20, "F");
+                        user.displaydetail();
+
+                      Scanner scanner = new Scanner(System.in);
+
+                        System.out.print("Enter new name: ");
+                        String newName = scanner.nextLine();
+                        user.setName(newName);
+                        System.out.print("Enter new age: ");
+                        int newAge = scanner.nextInt();
+                        user.setAge(newAge);
+                        scanner.nextLine();
+
+    
+                        System.out.println("\nUpdated User Information:");
+                        System.out.println("ID: " + user.getId());
+                        System.out.println("Name: " + user.getName());
+                        System.out.println("Age: " + user.getAge());
+                        System.out.println("Gender: " + user.getGender());
+
+                        scanner.close();
+    }
+   
 }
